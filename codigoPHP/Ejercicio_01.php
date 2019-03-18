@@ -1,32 +1,43 @@
 <?php
 
+// Creamos e inicializamos las variables.
 $cadena = "Israel García Cabañeros";
 $entero = 1;
 $flotante = 1.5;
 $booleano = true;
 
-echo $cadena;
-echo $entero;
-echo $flotante;
-echo $booleano;
+echo '<h1>Función echo.</h1>';
+// Imprimimos los valores de las variables con la función echo.
+echo 'La variable $cadena de tipo ' . gettype($cadena) . ' tiene el valor: ' . $cadena;
+echo 'La variable $entero de tipo ' . gettype($entero) . ' tiene el valor: ' . $entero;
+echo 'La variable $flotante de tipo ' . gettype($flotante) . ' tiene el valor: ' . $flotante;
+echo 'La variable $booleano de tipo ' . gettype($booleano) . ' tiene el valor: ' . $booleano;
 
-print $cadena;
-print $entero;
-print $flotante;
-print $booleano;
+echo '<h1>Función print.</h1>';
+// Imprimimos los valores de las variables con la función print.
+print 'La variable $cadena de tipo ' . gettype($cadena) . ' tiene el valor: ' . $cadena;
+print 'La variable $entero de tipo ' . gettype($entero) . ' tiene el valor: ' . $entero;
+print 'La variable $flotante de tipo ' . gettype($flotante) . ' tiene el valor: ' . $flotante;
+print 'La variable $booleano de tipo ' . gettype($booleano) . ' tiene el valor: ' . $booleano;
 
-printf ($cadena);
-printf ($entero);
-printf ($flotante);
-printf ($booleano);
+echo '<h1>Función printf.</h1>';
+// Imprimimos los valores de las variables con la función printf.
+printf ('La variable $cadena de tipo ' . gettype($cadena) . ' tiene el valor: ' . $cadena);
+printf ('La variable $entero de tipo ' . gettype($entero) . ' tiene el valor: ' . $entero);
+printf ('La variable $flotante de tipo ' . gettype($flotante) . ' tiene el valor: ' . $flotante);
+printf ('La variable $booleano de tipo ' . gettype($booleano) . ' tiene el valor: ' . $booleano);
 
-print_r ($cadena);
-print_r ($entero);
-print_r ($flotante);
-print_r ($booleano);
+echo '<h1>Función print_r.</h1>';
+// Imprimimos los valores de las variables con la función print_r.
+print_r ('La variable $cadena de tipo ' . gettype($cadena) . ' tiene el valor: ' . $cadena);
+print_r ('La variable $entero de tipo ' . gettype($entero) . ' tiene el valor: ' . $entero);
+print_r ('La variable $flotante de tipo ' . gettype($flotante) . ' tiene el valor: ' . $flotante);
+print_r ('La variable $booleano de tipo ' . gettype($booleano) . ' tiene el valor: ' . $booleano);
 
-var_dump ($cadena);
-var_dump ($entero);
-var_dump ($flotante);
-var_dump ($booleano);
+echo '<h1>Función var_dump.</h1>';
+// Imprimimos los valores de las variables con la función var_dump.
+var_dump ('La variable $cadena de tipo ' . gettype($cadena) . ' tiene el valor: ' . $cadena);
+var_dump ('La variable $entero de tipo ' . gettype($entero) . ' tiene el valor: ' . $entero);
+var_dump ('La variable $flotante de tipo ' . gettype($flotante) . ' tiene el valor: ' . $flotante);
+var_dump ('La variable $booleano de tipo ' . gettype($booleano) . ' tiene el valor: ' . $booleano);
 
