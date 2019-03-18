@@ -8,7 +8,7 @@ $heredoc = <<<EOF
 EOF;
 
 // Imprimimos el valor de la variable $heredoc.
-echo "$heredoc";
+echo "<p>" . $heredoc . "</p>";
 
 // Con ' vemos que imprime el nombre de la variable y no su valor.
-echo '$heredoc';
+echo '<p>La variable $heredoc no muestra su valor al <br> imprimirse por pantalla con comillas simples.</p>';
