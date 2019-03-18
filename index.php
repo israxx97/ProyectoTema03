@@ -102,7 +102,7 @@
 
             <tr>
                 <td>
-                    <a href="./codigoPHP/Ejercicio_13.php">Ejercicio 13.- Crear una función que cuente el número de visitas a la página actual desde una fecha concreta.</a>
+                    <a href="./codigoPHP/Ejercicio_13.php" onclick="return false">Ejercicio 13.- Crear una función que cuente el número de visitas a la página actual desde una fecha concreta.</a>
                 </td>
             </tr>
 
