@@ -1,7 +1,7 @@
 <?php
 
 // Seleccionamos el idioma.
-setlocale(LC_TIME, 'es_ES.UTF-8');
+setlocale(LC_TIME, 'pt_PT.UTF-8');
 
 // Establecemos la zona horaria predeterminada a usar.
 date_default_timezone_set('Europe/Madrid');
@@ -19,6 +19,6 @@ date_default_timezone_set('Europe/Madrid');
  * s -> Segundos.
  * A -> AM/PM.
  */
-echo '<p>Fecha y hora en España: ';
+echo '<p>Fecha y hora en Lisboa: ';
 echo date('l jS \d\e F Y h:i:s A');
 echo '</p>';

@@ -90,7 +90,7 @@
 
             <tr>
                 <td>
-                    <a href="./codigoPHP/Ejercicio_11.php">Ejercicio 11.- Mostrar el documento PHPDoc del proyecto que se está ejecutando generado con PHP Documentor o ApiGen.</a>
+                    <a href="./codigoPHP/Ejercicio_11.php" onclick="return false">Ejercicio 11.- Mostrar el documento PHPDoc del proyecto que se está ejecutando generado con PHP Documentor o ApiGen.</a>
                 </td>
             </tr>
 
