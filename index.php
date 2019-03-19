@@ -18,6 +18,7 @@
     <body>
         <nav class="navbar navbar-dark bg-dark justify-content-between">
             <a class="navbar-brand" href="../../index.html"><img src="./webroot/images/home.png" alt="home"></a>
+            <a class="navbar-brand" href="https://github.com/israxx97/ProyectoTema03" target="_blank"><img src="" alt="github"></a>
             <h3 class="text-white">ProyectoDWES - Tema 03</h3>
         </nav>
         <table class="table table-striped">
@@ -142,14 +143,13 @@
 
             <tr>
                 <td>
-                    <a href="./codigoPHP/Ejercicio_19.php">Ejercicio 19.- Construir una librería de funciones de validación de campos de formularios (LibreríaValidacionFormularios.php) para utilizarla en
-                        los siguientes ejercicios.</a>
+                    <a href="./codigoPHP/Ejercicio_19.php">Ejercicio 19.- Construir una librería de funciones de cálculo de datos de un cubo.</a>
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <a href="./codigoPHP/Ejercicio_20.php">Ejercicio 20.- Convertir la LibreriaValidacionFormularios.php en una clase ValidacionFormularios.php.</a>
+                    <a href="./codigoPHP/Ejercicio_20.php">Ejercicio 20.- Convertir la LibreriaCalculoDatosCubo.php en una clase CalculoDatosCubo.php.</a>
                 </td>
             </tr>
 
