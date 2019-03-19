@@ -5,6 +5,13 @@
     </head>
     <body>
         <?php
+        /*
+         * Si usamos un switch, le pasaremos como parámetro el valor true.
+         * Esto lo hacemos porque, al no tener ninguna variable, le pasamos
+         * un valor real para que pueda entrar en la estructura del switch.
+         * 
+         * También puede hacerse con varios if() {...} anidados.
+         */
         switch (true) {
             case (isset($_POST['enviar'])):
                 echo '<p> Nombre: ' . $_POST['username'] . '.</p>';
