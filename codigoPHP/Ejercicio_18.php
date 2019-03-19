@@ -37,13 +37,13 @@ static $contador2 = 0;
 /*
  * Recorremos las filas del teatro.
  */
-foreach ($a_teatro as $key_fila => $fila) {
+foreach ($a_teatro as $key_fila => $numFila) {
     $contador++;
     echo '<h3>En la fila ' . $contador . ' se sientan: </h3>';
     /*
      * Recorremos los asientos de la fila que estamos recorriendo.
      */
-    while (list($key, $value) = each($fila)) {
+    while (list($key, $value) = each($numFila)) {
         $contador2++;
         if ($value != null) {
             echo '<p>' . $value . ' en el asiento ' . $contador2 . '.</p>';
