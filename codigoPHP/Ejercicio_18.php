@@ -1,59 +1,55 @@
 <?php
 
 /*
- * Creamos y rellenamos el array numérico $a_teatro.
+ * Creamos e inicializamos el array $a_teatro a null.
  */
-$a_teatro = array(
-    array(null, null, null, 'Teatrero 1', null, null, null, 'Teatrero 2', null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, 'Teatrero 4', 'Teatrero 5', null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, 'Teatrero 3', null, null, null, null, null, null, null, null, null, null),
-    array(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null)
-);
+for ($numFila = 1; $numFila < 20; $numFila++) {
+    for ($numAsiento = 1; $numAsiento < 15; $numAsiento++) {
+        $a_teatro[$numFila][$numAsiento] = null;
+    }
+}
 
 /*
- * Inicializamos dos contadores, el primero
- * para las filas, y el segundo, para los
- * asientos.
+ * Rellenamos el array numérico $a_teatro.
  */
-static $contador = 0;
-static $contador2 = 0;
+$a_teatro[1][4] = 'Teatrero 1';
+$a_teatro[1][8] = 'Teatrero 2';
+$a_teatro[19][5] = 'Teatrero 3';
+$a_teatro[13][6] = 'Teatrero 4';
+$a_teatro[13][7] = 'Teatrero 5';
 
+echo '<h3>Asientos ocupados.</h3>';
 /*
- * Recorremos las filas del teatro.
+ * Recorremos las filas del array $a_teatro.
  */
-foreach ($a_teatro as $key_fila => $numFila) {
-    $contador++;
-    echo '<h3>En la fila ' . $contador . ' se sientan: </h3>';
+for ($numFila = 1; $numFila < 20; $numFila++) {
     /*
-     * Recorremos los asientos de la fila que estamos recorriendo.
+     * Recorremos los asientos de cada fila. 
      */
-    while (list($key, $value) = each($numFila)) {
-        $contador2++;
-        if ($value != null) {
-            echo '<p>' . $value . ' en el asiento ' . $contador2 . '.</p>';
+    for ($numAsiento = 1; $numAsiento < 15; $numAsiento++) {
+        /*
+         * Comprobamos si la posición de la fila y el asiento
+         * está definida y no es null con la función isset().
+         */
+        if (isset($a_teatro[$numFila][$numAsiento])) {
+            /*
+             * Si se cumple la condición del isset se imprime por
+             * pantalla el nombre de la persona sentada en dicha
+             * fila y asiento.
+             */
+            echo '<p>' . $a_teatro[$numFila][$numAsiento] . ' se ha sentado en la fila ' . $numFila . ', asiento ' . $numAsiento . '.</p>';
         }
     }
-    /*
-     * Devolvemos el valor 0 al contador de asientos
-     * cada vez que sale del segundo bucle para
-     * contar de nuevo los asientos de la siguiente 
-     * fila desde 0.
-     */
-    $contador2 = 0;
+}
+
+echo '<h3>Asientos libres.</h3>';
+
+for ($numFila = 1; $numFila <= 20; $numFila++) {
+    echo '<p>En la fila <b>' . $numFila . '</b> están libres';
+    for ($numAsiento = 1; $numAsiento <= 15; $numAsiento++) {
+        if (!isset($a_teatro[$numFila][$numAsiento])) {
+            echo ' - ' . $numAsiento;
+        }
+    }
+    echo '</p>';
 }
