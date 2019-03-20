@@ -9,8 +9,8 @@
  * @param float $lado
  * @return $volumen
  */
-function volumenCubo($lado) {
-    $volumen = pow($lado, 3);
+function volumenCubo($x, $y, $z) {
+    $volumen = $x * $y * $z;
 
     return $volumen;
 }
@@ -25,8 +25,8 @@ function volumenCubo($lado) {
  * @param float $lado
  * @return $superficieTotal
  */
-function areaCubo($lado) {
-    $superficieTotal = pow($lado, 2) * 6;
+function areaCubo($x, $y, $z) {
+    $superficieTotal = 2 * (($x * $y) + ($x * $z) + ($y + $z));
 
     return $superficieTotal;
 }
@@ -35,10 +35,10 @@ function areaCubo($lado) {
  * Imprimimos por pantalla el volumen de un cubo del
  * que hemos pasado como parámetro su lado.
  */
-echo '<p>Volumen de un cubo con lado 5cm: ' . volumenCubo(5) . 'cm3.</p>';
+echo '<p>Volumen de un cubo con lado 5cm: ' . volumenCubo(5, 6, 7) . 'cm3.</p>';
 
 /*
  * Imprimimos por pantalla el area total de un cubo del
  * que hemos pasado como parámetro su lado.
  */
-echo '<p>Área total de un cubo con lado 5cm: ' . areaCubo(5) . 'cm2.</p>';
+echo '<p>Área total de un cubo con lado 5cm: ' . areaCubo(5, 6, 7) . 'cm2.</p>';
