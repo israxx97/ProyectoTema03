@@ -1,4 +1,5 @@
 <?php
+
 /**
  * File validacionFormularios.php
  * 
@@ -126,16 +127,16 @@ class validacionFormularios {
      * @param $obligatorio Valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es.
      * @return null|string Devuelve null en el caso en el que esté correcto, si no devuelve una cadena con el mensaje de error.
      */
-    public static function comprobarEntero($integer, $max, $min, $obligatorio){
+    public static function comprobarEntero($integer, $max, $min, $obligatorio) {
         $mensajeError = null;
         if (!filter_var($integer, FILTER_VALIDATE_INT)) {
             $mensajeError = "El campo no es un entero. ";
         }
-        if($integer>$max){
-            $mensajeError = $mensajeError."El número no puede ser mayor que ".$max.".";
+        if ($integer > $max) {
+            $mensajeError = $mensajeError . "El número no puede ser mayor que " . $max . ".";
         }
-        if($integer<$min){
-            $mensajeError = $mensajeError."El número no puede ser menor que ".$min.".";
+        if ($integer < $min) {
+            $mensajeError = $mensajeError . "El número no puede ser menor que " . $min . ".";
         }
         if (empty($integer) && $obligatorio == 0) {
             $mensajeError = null;
@@ -159,16 +160,16 @@ class validacionFormularios {
      * @param $obligatorio Valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es.
      * @return null|string Devuelve null en el caso en el que esté correcto, si no devuelve una cadena con el mensaje de error.
      */
-    public static function comprobarFloat($float, $max, $min, $obligatorio){
+    public static function comprobarFloat($float, $max, $min, $obligatorio) {
         $mensajeError = null;
         if (!filter_var($float, FILTER_VALIDATE_FLOAT)) {
             $mensajeError = "El campo no es un decimal. ";
         }
-        if($float>$max){
-            $mensajeError = $mensajeError."El número no puede ser mayor que ".$max.".";
+        if ($float > $max) {
+            $mensajeError = $mensajeError . "El número no puede ser mayor que " . $max . ".";
         }
-        if($float<$min){
-            $mensajeError = $mensajeError."El número no puede ser menor que ".$min.".";
+        if ($float < $min) {
+            $mensajeError = $mensajeError . "El número no puede ser menor que " . $min . ".";
         }
         if (empty($float) && $obligatorio == 0) {
             $mensajeError = null;
@@ -235,15 +236,15 @@ class validacionFormularios {
      */
     public static function validarURL($url, $obligatorio) {
         $mensajeError = null;
-        
-        if (!filter_var($url, FILTER_VALIDATE_URL)){
+
+        if (!filter_var($url, FILTER_VALIDATE_URL)) {
             $mensajeError = " Formato incorrecto de URL.";
-        }        
-        
-        if($obligatorio==0 && empty($url)){
-            $mensajeError=null;
-        }        
-                
+        }
+
+        if ($obligatorio == 0 && empty($url)) {
+            $mensajeError = null;
+        }
+
         return $mensajeError;
     }
 
@@ -264,7 +265,7 @@ class validacionFormularios {
         if (self::validateDate($fecha) && !self::comprobarNoVacio($fecha) && ($fecha > $fechaMinima) && ($fecha < $fechaMaxima)) {
             $mensajeError = null;
         } else {
-            $mensajeError = " Por favor introduzca una fecha entre " . $fechaMinima . " y " . $fechaMaxima.".";
+            $mensajeError = " Por favor introduzca una fecha entre " . $fechaMinima . " y " . $fechaMaxima . ".";
         }
         if (!self::validateDate($fecha, 'Y-m-d')) {
             $mensajeError = " Formato incorrecto de fecha (Año-Mes-dia) (2000-01-01).";
@@ -328,14 +329,14 @@ class validacionFormularios {
      * @param $obligatorio Valor booleano indicado mediante 1, si es obligatorio o 0 si no lo es.
      * @return null|string Devuelve null si es correcto o un mensaje de error en caso de que lo haya.
      */
-    public static function validarCp($cp, $obligatorio){
+    public static function validarCp($cp, $obligatorio) {
         $mensajeError = null;
 
-        if (!preg_match('/^[0-9]{5}$/i', $cp)){
-            $mensajeError=" El código postal no es válido.";
+        if (!preg_match('/^[0-9]{5}$/i', $cp)) {
+            $mensajeError = " El código postal no es válido.";
         }
 
-        if ($obligatorio == 0 && empty($cp)){
+        if ($obligatorio == 0 && empty($cp)) {
             $mensajeError = null;
         }
         return $mensajeError;
@@ -552,10 +553,9 @@ class validacionFormularios {
      * @return null -> Si la variable errores es null o en su defecto contiene tan sólo espacios en blanco
      * $mensajeError -> Que contiene una cadena con los errores que han surgido concatenados.
      */
-    
-	public static function validaTelefono($tel, $obligatorio){
-        $mensaje=null;
-        $patron="/^[9|6|7][0-9]{8}$/";
+    public static function validaTelefono($tel, $obligatorio) {
+        $mensaje = null;
+        $patron = "/^[9|6|7][0-9]{8}$/";
         if (empty($tel)) {
             $mensaje .= " Campo Vacío.";
         }
@@ -565,8 +565,9 @@ class validacionFormularios {
         if (empty(htmlspecialchars(strip_tags(trim($tel)))) && $obligatorio == 0) {
             $mensaje = null;
         }
-        return $mensaje; 
+        return $mensaje;
     }
+
 }
 
 ?>

@@ -39,12 +39,12 @@
         ];
 
         $a_radiobutton = [
-            'radiobutton' => 'opcion1',
+            'opcion1',
             'opcion2'
         ];
-        
+
         $a_select = [
-            'select' => 'opcion1',
+            'opcion1',
             'opcion2',
             'opcion3',
             'opcion4'
@@ -87,9 +87,9 @@
                 $a_errores['fechaobligatorio'] = validacionFormularios::validarFecha($_POST['fechaobligatorio'], 1);
                 $a_errores['fechanoobligatorio'] = validacionFormularios::validarFecha($_POST['fechanoobligatorio'], 0);
 
-                $a_errores['radiobutton'] = validacionFormularios::validarRadioB($_POST['radiobutton'], 1);
+                $a_errores['radiobutton'] = validacionFormularios::validarElementoEnLista($_POST['radiobutton'], $a_radiobutton, 1);
 
-                $a_errores['select'] = validacionFormularios::validarRadioB($_POST['select'], 1);
+                $a_errores['select'] = validacionFormularios::validarElementoEnLista($_POST['select'], $a_select, 1);
 
                 foreach ($a_errores as $error) {
                     if ($error != null) {
@@ -355,17 +355,17 @@
                     <br>
                     <font color="red">*</font>
                     <span for="radiobutton">Radio Button&nbsp;</span>
-                    <input type="radio" name="radiobutton" <?php if ((isset($_REQUEST['radiobutton']) == 'opcion1') && is_null($a_errores['radiobutton'])) echo 'checked'; ?> value="opcion1">Opción 1
-                    <input type="radio" name="radiobutton" <?php if ((isset($_REQUEST['radiobutton']) == 'opcion2') && is_null($a_errores['radiobutton'])) echo 'checked'; ?> value="opcion2">Opción 2
+                    <input type="radio" name="radiobutton" <?php echo (isset($_REQUEST['radiobutton']) && $_REQUEST['radiobutton'] == 'opcion1' ? 'checked' : ''); ?> value="opcion1" checked>Opción 1
+                    <input type="radio" name="radiobutton" <?php echo (isset($_REQUEST['radiobutton']) && $_REQUEST['radiobutton'] == 'opcion2' ? 'checked' : ''); ?> value="opcion2">Opción 2
                     <font color="red"><?php echo $a_errores['radiobutton']; ?></font>
                     <br>
                     <font color="red">*</font>
                     <span for="select">Select&nbsp;</span>
                     <select name="select" value="<?php echo $_REQUEST['select']; ?>">
-                        <option value="opcion1" value="<?php if (isset($_REQUEST['select']) == 'opcion1') echo 'selected'; ?>">Opción 1</option>
-                        <option value="opcion2" value="<?php if (isset($_REQUEST['select']) == 'opcion2') echo 'selected'; ?>">Opción 2</option>
-                        <option value="opcion3" value="<?php if (isset($_REQUEST['select']) == 'opcion3') echo 'selected'; ?>">Opción 3</option>
-                        <option value="opcion4" value="<?php if (isset($_REQUEST['select']) == 'opcion4') echo 'selected'; ?>">Opción 4</option>
+                        <option value="opcion1" value="opcion1" <?php echo (isset($_REQUEST['select']) && $_REQUEST['select'] == 'opcion1' ? 'selected' : ''); ?>>Opción 1</option>
+                        <option value="opcion2" value="opcion2" <?php echo (isset($_REQUEST['select']) && $_REQUEST['select'] == 'opcion2' ? 'selected' : ''); ?>>Opción 2</option>
+                        <option value="opcion3" value="opcion3" <?php echo (isset($_REQUEST['select']) && $_REQUEST['select'] == 'opcion3' ? 'selected' : ''); ?>>Opción 3</option>
+                        <option value="opcion4" value="opcion4" <?php echo (isset($_REQUEST['select']) && $_REQUEST['select'] == 'opcion4' ? 'selected' : ''); ?>>Opción 4</option>
                     </select>
                     <font color="red"><?php echo $a_errores['select']; ?></font>
                     <br><br>
