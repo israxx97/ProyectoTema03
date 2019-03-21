@@ -197,6 +197,12 @@
                         presión atmosférica.</a>
                 </td>
             </tr>
+
+            <tr>
+                <td>
+                    <a href="./codigoPHP/Ejercicio_27.php">Ejercicio 27.- Con la ayuda de la plantilla de formularios y la clase de validación de formularios realizar una página web que recoja los datos de 5 personas y realize un examen de las respuestas.</a>
+                </td>
+            </tr>
         </table>
     </body>
 </html>
