@@ -26,15 +26,15 @@ $a_respuesta = [
 ];
 
 $a_estadoCieloSelect = [
-    'soleado',
-    'despejado',
-    'nublado'
+    'Soleado',
+    'Despejado',
+    'Nublado'
 ];
 
 $a_estadoAnimoRadio = [
-    'bueno',
-    'malo',
-    'comoElTiempo'
+    'Bueno',
+    'Malo',
+    'Como el tiempo'
 ];
 
 switch (true) {
@@ -111,16 +111,16 @@ switch (true) {
             <br>
             <span for="estadoCielo">Estado del cielo&nbsp;</span>
             <select name="estadoCielo">
-                <option value="soleado" <?php echo (isset($_REQUEST['estadoCielo']) && $_REQUEST['estadoCielo'] == 'soleado' ? 'selected' : ''); ?>>Soleado</option>
-                <option value="despejado" <?php echo (isset($_REQUEST['estadoCielo']) && $_REQUEST['estadoCielo'] == 'despejado' ? 'selected' : ''); ?>>Despejado</option>
-                <option value="nublado" <?php echo (isset($_REQUEST['estadoCielo']) && $_REQUEST['estadoCielo'] == 'nublado' ? 'selected' : ''); ?>>Nublado</option>
+                <option value="Soleado" <?php echo (isset($_REQUEST['estadoCielo']) && $_REQUEST['estadoCielo'] == 'Soleado' ? 'selected' : ''); ?>>Soleado</option>
+                <option value="Despejado" <?php echo (isset($_REQUEST['estadoCielo']) && $_REQUEST['estadoCielo'] == 'Despejado' ? 'selected' : ''); ?>>Despejado</option>
+                <option value="Nublado" <?php echo (isset($_REQUEST['estadoCielo']) && $_REQUEST['estadoCielo'] == 'Nublado' ? 'selected' : ''); ?>>Nublado</option>
             </select><font color="red">&nbsp;*</font>
             <font color="red"><?php echo $a_errores['estadoCielo']; ?></font>
             <br>
             <span for="estadoAnimo">Estado de ánimo&nbsp;</span>
-            <input type="radio" name="estadoAnimo" <?php echo (isset($_REQUEST['estadoAnimo']) && $_REQUEST['estadoAnimo'] == 'bueno' ? 'checked' : ''); ?> value="bueno" checked>Bueno
-            <input type="radio" name="estadoAnimo" <?php echo (isset($_REQUEST['estadoAnimo']) && $_REQUEST['estadoAnimo'] == 'malo' ? 'checked' : ''); ?> value="malo">Malo
-            <input type="radio" name="estadoAnimo" <?php echo (isset($_REQUEST['estadoAnimo']) && $_REQUEST['estadoAnimo'] == 'comoElTiempo' ? 'checked' : ''); ?> value="comoElTiempo">Como el tiempo
+            <input type="radio" name="estadoAnimo" <?php echo (isset($_REQUEST['estadoAnimo']) && $_REQUEST['estadoAnimo'] == 'Bueno' ? 'checked' : ''); ?> value="Bueno" checked>Bueno
+            <input type="radio" name="estadoAnimo" <?php echo (isset($_REQUEST['estadoAnimo']) && $_REQUEST['estadoAnimo'] == 'Malo' ? 'checked' : ''); ?> value="Malo">Malo
+            <input type="radio" name="estadoAnimo" <?php echo (isset($_REQUEST['estadoAnimo']) && $_REQUEST['estadoAnimo'] == 'Como el tiempo' ? 'checked' : ''); ?> value="Como el tiempo">Como el tiempo
             <font color="red"><?php echo $a_errores['estadoAnimo']; ?></font>
             <br>
             <span for="planHoy">Plan para hoy&nbsp;</span>
